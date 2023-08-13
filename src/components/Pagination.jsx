@@ -1,6 +1,16 @@
-const Pagination = ({pages, setCurrentPage, currentPage}) => {
+const Pagination = ({ pages, setCurrentPage, currentPage }) => {
   return (
-    <ul className="flex">{pages.map((page) => <li className={`${currentPage === page && 'text-red-500'}`} onClick={() => setCurrentPage(page)} key={page}>{page}</li>)}</ul>
-  )
-}
-export default Pagination
+    <ul className="flex gap-4 flex-wrap justify-center">
+      {pages.map((page) => (
+        <li
+          className={`cursor-pointer h-12 aspect-square bg-light-yellow border-4 border-red-wine rounded-full flex justify-center items-center text-red-wine text-xl font-bold hover:scale-110 transition-transform ${currentPage === page && "bg-red-wine border-light-yellow text-light-yellow scale-110 transition-all"}`}
+          onClick={() => setCurrentPage(page)}
+          key={page}
+        >
+          {page}
+        </li>
+      ))}
+    </ul>
+  );
+};
+export default Pagination;
