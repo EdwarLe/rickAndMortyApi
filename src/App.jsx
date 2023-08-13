@@ -29,9 +29,9 @@ const fetchDimension = (idLocation) => {
   }, []);
 
   return (
-    <main className="bg-[url(/images/bg-rm.jpg)] min-h-screen bg-cover p-4 font-Nunito text-black">
+    <main className="bg-[url(/images/bg-rm.jpg)] min-h-screen bg-cover p-4 font-Nunito text-black grid grid-rows-[repeat(4,auto)] gap-8 place-items-center">
       <section>
-        <img className="w-[300px] pt-8" src="/images/logo-ram.png" alt="" />
+        <img className="w-[260px] pt-8" src="/images/logo-ram.png" alt="" />
       </section>
       <LocationForm handleSubmit={handleSubmit}/>
       <LocationInfo currentLocation={currentLocation}/>

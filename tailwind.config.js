@@ -11,7 +11,11 @@ export default {
       'light-yellow': '#FEEF66',
       'lila': '#C9BEDC',
       'purple': '#856888',
-      'white': '#ffffff'
+      'white': '#ffffff',
+      'dark-gray': "#292929",
+      'green-apple': '#7FFF00',
+      'red': '#d90429',
+      'gray-blue': '#bfc7d1'
     },
     fontFamily: {
       'Nunito': ['Nunito', 'sans-serif']
