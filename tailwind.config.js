@@ -16,6 +16,7 @@ export default {
       'green-apple': '#7FFF00',
       'red': '#d90429',
       'gray-blue': '#bfc7d1',
+      'black': '#000000'
     },
     fontFamily: {
       'Nunito': ['Nunito', 'sans-serif']

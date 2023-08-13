@@ -31,15 +31,15 @@ const CardResidents = ({ residentURL }) => {
           <div
             className={`h-3 aspect-square ${
               statusObj[residentInfo?.status]
-            } rounded-full`}
+            } rounded-full animate-pulse`}
           ></div>
           {residentInfo?.status}
         </div>
       </header>
-      <section className="bg-purple h-[200px] border-8 border-red-wine rounded-3xl w-full p-6 relative -mt-14">
+      <section className="bg-purple h-[200px] border-8 border-red-wine rounded-3xl w-full p-6 relative -mt-14 transition-all duration-700 bodyCard hover:h-[250px]">
         <div className="bg-lila absolute h-full w-[95%] left-0 top-0 rounded-special"></div>
         <div className="absolute w-full left-0 top-0">
-          <h3 className="bg-light-yellow text-2xl text-center font-bold text-red-wine pb-4 pt-8 rounded-[15px] w-full line-clamp-1">{residentInfo?.name}</h3>
+          <h3 className="bg-light-yellow text-2xl text-center font-bold text-red-wine pb-4 pt-8 rounded-[15px] w-full line-clamp-1 scaleCard hover:line-clamp-2 transition-all duration-700">{residentInfo?.name}</h3>
           <ul className=" text-red-wine text-sm p-4 grid grid-rows-3 gap-2">
             <ListInfoResidents residentInfo={residentInfo?.species} residentProperties={"SPECIES: "}/>
             <ListInfoResidents residentInfo={residentInfo?.origin.name} residentProperties={"ORIGIN: "}/>
