@@ -24,13 +24,13 @@ const ResidentList = ({ residents, currentLocation }) => {
   }, [currentLocation]);
 
   return (
-    <section className="grid grid-rows-[auto_auto] place-items-center">
+    <section className="grid grid-rows-[auto_auto] place-items-center gap-20">
       <section className="grid gap-8">
         {residentsInPage.map((resident) => (
           <CardResidents key={resident} residentURL={resident} />
         ))}
       </section>
-      <section className="text-white">
+      <section className="text-white mb-20">
         <Pagination
           pages={pages}
           setCurrentPage={setCurrentPage}
