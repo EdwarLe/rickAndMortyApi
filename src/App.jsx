@@ -49,23 +49,20 @@ function App() {
     });
   };
 
-  useEffect(() => {
-    
-      const randomDimension = getRandomDimension(126)
-      isLoading === false ? fetchDimension(EMPTY_DIMENSION) : fetchDimension(randomDimension)
-      // isLoading !== false && fetchDimension(randomDimension)
-   
-  }, [])
+  const staticDimension = () =>{
+    fetchDimension(EMPTY_DIMENSION)
+  }
 
-  useEffect(() => {
-    const randomDimension = getRandomDimension(126);
-    fetchDimension(randomDimension);
-
-    
-  }, []);
+useEffect(() => {
+  staticDimension()
+  setTimeout(() => {
+    const randomdimension = getRandomDimension(126)
+  fetchDimension(randomdimension)
+  }, 2000);
+}, [])
 
   return (
-    <main className="bg-[url(/images/bg-rm.jpg)] min-h-screen bg-cover p-4 font-Nunito text-black grid grid-rows-[repeat(4,auto)] gap-8 place-items-center relative bg-center overflow-hidden">
+    <main className="bg-[url(/images/bg-rm.png)] min-h-screen bg-cover px-4 font-Nunito text-black grid grid-rows-[repeat(4,auto)] gap-8 place-items-center relative bg-bottom overflow-hidden">
       <section>
         <img
           className="w-[260px] pt-8 min-[500px]:w-[350px]"

@@ -20,7 +20,7 @@ const CardResidents = ({ residentURL }) => {
   });
 
   return (
-    <article className="w-[260px] h-80 grid grid-rows-[auto_auto] place-items-center">
+    <article className="w-[260px] h-80 grid grid-rows-[auto_auto] place-items-center select-none">
       <header className="text-center relative z-10">
         <img
           className="h-[150px] aspect-square border-solid border-[8px] border-red-wine rounded-full"
@@ -36,10 +36,10 @@ const CardResidents = ({ residentURL }) => {
           {residentInfo?.status}
         </div>
       </header>
-      <section className="bg-purple h-[200px] border-8 border-red-wine rounded-3xl w-full p-6 relative -mt-14 transition-all duration-700 bodyCard hover:h-[250px]">
+      <section className="bg-purple h-[250px] border-8 border-red-wine rounded-3xl w-full p-6 relative -mt-14 transition-all duration-700 bodyCard hover:h-[250px]">
         <div className="bg-lila absolute h-full w-[95%] left-0 top-0 rounded-special"></div>
         <div className="absolute w-full left-0 top-0">
-          <h3 className="bg-light-yellow text-2xl text-center font-bold text-red-wine pb-4 pt-8 rounded-[15px] w-full line-clamp-1 scaleCard hover:line-clamp-2 transition-all duration-700">{residentInfo?.name}</h3>
+          <h3 className="bg-light-yellow h-[130px] text-2xl text-center font-bold text-red-wine pb-4 flex items-center justify-center pt-[70px] rounded-[15px] w-full scaleCard transition-all duration-700">{residentInfo?.name}</h3>
           <ul className=" text-red-wine text-sm p-4 grid grid-rows-3 gap-2">
             <ListInfoResidents residentInfo={residentInfo?.species} residentProperties={"SPECIES: "}/>
             <ListInfoResidents residentInfo={residentInfo?.origin.name} residentProperties={"ORIGIN: "}/>

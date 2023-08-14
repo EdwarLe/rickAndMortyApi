@@ -15,6 +15,16 @@ export default {
             transform: 'rotate(3deg)'
           }
         }
+      },
+      keyframes: {
+        pulse: {
+          '0%, 100%': {
+            opacity: 1
+          },
+          '50%': {
+            opacity: .5
+          }
+        }
       }
     },
     colors: {
@@ -34,7 +44,8 @@ export default {
     },
     animation: {
       'spin-slow': 'spin 5s linear infinite',
-      'wiggle': 'wiggle 1s ease-in-out infinite'
+      'wiggle': 'wiggle 1s ease-in-out infinite',
+      'pulse': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;'
     },
   },
   plugins: [],
