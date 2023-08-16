@@ -22,6 +22,11 @@ function App() {
     isLoading,
     loaderScreen,
   } = useCatchErrors(true);
+
+  const btnGoToUp = () => {
+    const buttonUp = document.querySelector('.bx-chevron-up-circle')
+    buttonUp.addEventListener('click', () => window.scrollTo(0, 0))
+  }
   
   
   const handleSubmit = (e) => {
@@ -33,7 +38,6 @@ function App() {
   };
   
   
-  console.log(isLoading);
   const fetchDimension = (idLocation) => {
     const URL = `https://rickandmortyapi.com/api/location/${idLocation}`;
     
@@ -95,6 +99,9 @@ useEffect(() => {
         residents={currentLocation?.residents ?? []}
         currentLocation={currentLocation}
       />
+      <div className="text-red-wine bg-lila rounded-full h-10 aspect-square flex justify-center items-center border-4 border-red-wine fixed bottom-4 right-4 cursor-pointer" onClick={btnGoToUp}>
+        <i className='bx bx-chevron-up-circle text-3xl'></i>
+      </div>
     </main>
   );
 }
